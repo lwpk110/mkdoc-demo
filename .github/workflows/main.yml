@@ -44,7 +44,7 @@ jobs:
       - name: Run mkdoc build and Depoloy
         run: |
           echo 'mkdoc build start...'
-          pipenv run 'mkdocs gh-deploy --force'          
+          pipenv run mkdocs gh-deploy --force        
           
           
         
