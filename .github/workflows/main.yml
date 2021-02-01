@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.7, 3.8]    
+        python-version: [3.8]    
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -44,12 +44,11 @@ jobs:
           pip3 install pipenv
           python -m site
           pipenv install
-          pipenv run
       - name: Run mkdoc build and Depoloy
         run: |
           echo 'mkdoc build start...'
           pwd
-          pipenv graph
+          pipenv shell
           mkdocs gh-deploy --force
           
           
