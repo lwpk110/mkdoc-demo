@@ -47,6 +47,7 @@ jobs:
       - name: Run mkdoc build and Depoloy
         run: |
           echo 'mkdoc build start...'
+          pwd
           mkdocs gh-deploy --force
           
           
