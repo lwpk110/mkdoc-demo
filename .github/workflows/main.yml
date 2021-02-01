@@ -49,6 +49,7 @@ jobs:
           echo 'mkdoc build start...'
           pwd
           pipenv shell
+          pip list
           mkdocs gh-deploy --force
           
           
