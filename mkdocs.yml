@@ -1,0 +1,38 @@
+site_name: 实例文档
+# ['readthedocs',material]
+theme:
+  name: material
+  custom_dir: custom
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  features:
+    - navigation.instant
+    - navigation.sections
+    # tab 导航,默认列表导航
+#    - navigation.tabs
+  palette:
+    scheme: default
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  icon:
+    logo: logo
+
+nav:
+  - 主页: index.md
+  - 关于: about.md
+# Google Analytics
+google_analytics:
+  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+  - auto
